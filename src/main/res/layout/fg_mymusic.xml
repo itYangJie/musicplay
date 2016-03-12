@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_mymusic"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+           >
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageview_songpic"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/music_album" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <com.ityang.qtmusic.ui.FocusTextView
+                    android:id="@+id/tv_songName"
+                    android:layout_width="130dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="歌名"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/tv_singer"
+                    android:layout_height="wrap_content"
+                    android:text="歌手"
+                    android:layout_width="150dp"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@android:color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:focusable="true"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progress="100"
+                android:progressDrawable="@drawable/po_seekbar"
+                android:thumb="@drawable/seekbar_thumb" />
+
+            <ImageView
+                android:id="@+id/imageview_play_pause"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/imageview_play_next"
+                android:layout_toStartOf="@+id/imageview_play_next"
+                android:src="@drawable/player_btn_play_normal" />
+
+            <ImageView
+                android:id="@+id/imageview_play_next"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/imageview_play_pause"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/player_btn_next_normal" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

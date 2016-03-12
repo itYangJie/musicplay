@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <SearchView
+       android:layout_width="match_parent"
+       android:divider="@null"
+       android:id="@+id/searchview"
+       android:background="@drawable/pic_list_item_bg"
+       android:queryHint="输入歌名/歌手"
+       android:layout_height="45dp">
+   </SearchView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linear_load"
+        android:layout_below="@+id/searchview"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="正在加载中，请稍候"/>
+    </LinearLayout>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:id="@+id/tv_fail"
+    android:visibility="gone"
+    android:layout_centerInParent="true"
+    android:text="抱歉，加载数据失败,点击重新加载"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:id="@+id/tv_queryfail"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:text="网络不给力，什么都没查到，请稍候再试"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/list_net"
+        android:layout_below="@+id/searchview"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
